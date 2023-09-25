@@ -7,6 +7,7 @@ import ErrorElements from "./errorElements/ErrorElements";
 import Home from "./componentes/home/Home";
 import Donation from "./componentes/Donation/Donation";
 import Statistics from "./componentes/Statistics/Statistics";
+import Education from "./componentes/DonationEducation/Education";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
       {
         path: "/statistics",
         element: <Statistics></Statistics>,
+      },
+      {
+        path: "/education/:id",
+        element: <Education></Education>,
+        loader: () => fetch("../donationData.json"),
       },
     ],
   },
