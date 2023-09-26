@@ -1,7 +1,7 @@
 const Banner = () => {
   return (
     <div>
-      <h2 className="text-center text-4xl font-bold mt-20">
+      <h2 className="text-center text-4xl font-bold mb-5">
         I Grow By Helping People In Need
       </h2>
       <div className="join flex justify-center mt-5">

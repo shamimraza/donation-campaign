@@ -7,6 +7,8 @@ const Donation = () => {
 
   const [donationApply, setDonationApply] = useState([]);
 
+  const [donationLength, setDonationLength] = useState(4);
+
   useEffect(() => {
     const storedDonationIds = getStoredDonateApplication();
     if (donations.length > 0) {
@@ -17,13 +19,12 @@ const Donation = () => {
           donationApplied.push(donation);
         }
       }
-      console.log(donations);
       setDonationApply(donationApplied);
     }
   }, [donations]);
   return (
     <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 mt-9 my-5">
-      {donationApply.map((donation) => (
+      {donationApply.slice(0, donationLength).map((donation) => (
         <div key={donation.id}>
           <span>
             <div
@@ -66,6 +67,17 @@ const Donation = () => {
           </span>
         </div>
       ))}
+      <div
+        style={{ textAlign: "center" }}
+        className={donationLength === donationApply.length && "hidden"}
+      >
+        <button
+          onClick={() => setDonationLength(donationApply.length)}
+          className="btn btn-primary text-white text-center"
+        >
+          See all
+        </button>
+      </div>
     </div>
   );
 };

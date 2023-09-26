@@ -10,7 +10,7 @@ const Categories = () => {
       .then((data) => setDonations(data));
   }, []);
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 mt-40 my-3">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 mt-20 my-3">
       {donations.map((donation) => (
         <Category key={donation.id} donation={donation}></Category>
       ))}

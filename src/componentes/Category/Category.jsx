@@ -10,7 +10,6 @@ const Category = ({ donation }) => {
     text_color,
     id,
   } = donation;
-  console.log(donation);
   return (
     <Link to={`/education/${id}`}>
       <div
