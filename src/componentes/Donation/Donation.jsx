@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { getStoredDonateApplication } from "../utility/localstorage";
 
 const Donation = () => {
@@ -26,7 +26,10 @@ const Donation = () => {
       {donationApply.map((donation) => (
         <div key={donation.id}>
           <span>
-            <div className="card card-side bg-base-100 shadow-xl ">
+            <div
+              style={{ backgroundColor: donation.card_bg_color }}
+              className="card card-side bg-base-100 shadow-xl "
+            >
               <figure>
                 <img
                   className="h-52 w-72"
@@ -35,11 +38,28 @@ const Donation = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">{donation.category}</h2>
-                <p>{donation.Description}</p>
-                <p>{donation.Price}</p>
+                <h2 className="card-title">
+                  <span
+                    className="text-white px-2 rounded"
+                    style={{ backgroundColor: donation.text_color }}
+                  >
+                    {donation.category}
+                  </span>
+                </h2>
+                <p style={{ color: donation.text_color }}>
+                  {donation.Description}
+                </p>
+                <p style={{ color: donation.text_color }}>{donation.Price}</p>
                 <div className="card-actions">
-                  <button className="btn btn-primary">View Details</button>
+                  <Link to="/">
+                    {" "}
+                    <button
+                      style={{ backgroundColor: donation.text_color }}
+                      className="btn btn-primary text-white"
+                    >
+                      View Details
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

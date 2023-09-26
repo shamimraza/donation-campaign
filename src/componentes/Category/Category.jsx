@@ -21,8 +21,9 @@ const Category = ({ donation }) => {
           <img className="w-full h-60" src={picture} alt="donate img" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">
+          <h2 className="card-title ">
             <span
+              className="px-2 rounded text-center"
               style={{ backgroundColor: category_bg_color, color: text_color }}
             >
               {category}{" "}
