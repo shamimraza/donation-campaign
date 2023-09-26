@@ -1,4 +1,4 @@
-- - Some features of the project have been discussed --
+- - Some features of the project have been discussed - - 
 
 - Layers and elements are created by setting up the router
 - Paths are created to navigate from one page to another
