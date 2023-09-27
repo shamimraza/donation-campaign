@@ -15,8 +15,10 @@ const Education = () => {
     toast("👌 You have donate successfully");
   };
   return (
-    <div className="my-7 absolute">
-      <img className="h-[500px] w-[1250px]" src={picture} alt="" />
+    <div className="my-7 ">
+      <img className="h-[500px] w-[1250px] " src={picture} alt="" />
+      <div className="w-[1250px] h-[160px] bg-black/20 absolute -mt-40 mb-96 "></div>
+
       <button
         onClick={handleClickButton}
         className="btn text-white relative -top-20 ml-10 "
