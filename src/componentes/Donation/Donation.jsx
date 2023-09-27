@@ -69,7 +69,7 @@ const Donation = () => {
       ))}
       <div
         style={{ textAlign: "center" }}
-        className={donationLength === donationApply.length && "hidden"}
+        className={donationLength == donationApply.length && "hidden"}
       >
         <button
           onClick={() => setDonationLength(donationApply.length)}
