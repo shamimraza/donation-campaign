@@ -6,7 +6,8 @@ const Banner = () => {
       </h2>
       <div className="join flex justify-center mt-5">
         <input
-          className="input input-bordered join-item"
+          type="text"
+          className="input input-bordered join-item w-full max-w-xs"
           placeholder="Search here...."
         />
         <button className="btn btn-error join-item -r-full text-white">
